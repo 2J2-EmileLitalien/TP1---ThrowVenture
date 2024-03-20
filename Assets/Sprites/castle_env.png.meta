@@ -1,0 +1,947 @@
+fileFormatVersion: 2
+guid: 8eac1d4d8cd524e49aceafaa25887029
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -207994861796681891
+    second: castle_env_0
+  - first:
+      213: -4445022054983906845
+    second: castle_env_1
+  - first:
+      213: -2332685906206651193
+    second: castle_env_2
+  - first:
+      213: 4852670541126992747
+    second: castle_env_3
+  - first:
+      213: -1162949384569549892
+    second: castle_env_4
+  - first:
+      213: 8883743248699752796
+    second: castle_env_5
+  - first:
+      213: -7802708566780381589
+    second: castle_env_6
+  - first:
+      213: 7505212315336009773
+    second: castle_env_7
+  - first:
+      213: -1129608101658700004
+    second: castle_env_8
+  - first:
+      213: -5018291283235691000
+    second: castle_env_9
+  - first:
+      213: 5529526567596142380
+    second: castle_env_10
+  - first:
+      213: -8137608722759060268
+    second: castle_env_11
+  - first:
+      213: -2584462977090657571
+    second: castle_env_12
+  - first:
+      213: -2491635706789813234
+    second: castle_env_13
+  - first:
+      213: 1309213315113277235
+    second: castle_env_14
+  - first:
+      213: 8784318799370337892
+    second: castle_env_15
+  - first:
+      213: -293550919736355872
+    second: castle_env_16
+  - first:
+      213: 2002100010313610172
+    second: castle_env_17
+  - first:
+      213: 3406053118739073269
+    second: castle_env_18
+  - first:
+      213: -2032595842404912772
+    second: castle_env_19
+  - first:
+      213: 1799875909049825550
+    second: castle_env_20
+  - first:
+      213: 7874498249956533742
+    second: castle_env_21
+  - first:
+      213: -1841994162556502953
+    second: castle_env_22
+  - first:
+      213: -4234831728882617475
+    second: castle_env_23
+  - first:
+      213: 2433876568293344631
+    second: castle_env_24
+  - first:
+      213: -9128615330651066050
+    second: castle_env_25
+  - first:
+      213: 702104906063407186
+    second: castle_env_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: castle_env_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 498
+        width: 181
+        height: 127
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8384072dd16f846bd6a6ebf335efe0
+      internalID: 186656516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 464
+        width: 64
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989afc49a134a5c4bae8b676f301c39b
+      internalID: 1691517655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_2
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 487
+        width: 137
+        height: 117
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa33029a314444049831023ac99aad09
+      internalID: -1847994887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 464
+        width: 224
+        height: 160
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86971dc8a8d6fd4482c58a718d85a69
+      internalID: 860151201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_4
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 400
+        width: 128
+        height: 160
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7819928b1eeeba44aae4f7d9678ad7bd
+      internalID: -985723762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_5
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 464
+        width: 80
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5ac21c79e74d94a9ab3610b49c4f54
+      internalID: 1178940884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_6
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 464
+        width: 80
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503cde4d2e7a161408d81957899a601e
+      internalID: 2102774531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 112
+        height: 101
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede294ab71b4e524682f033737091326
+      internalID: 2017998252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 32
+        height: 93
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2143e1b52d63b4a916c4f8501a446a
+      internalID: -561716937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_9
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 352
+        width: 112
+        height: 101
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74dea9bc2da9cf40ba8f46c4a4a47e4
+      internalID: 1777264564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 361
+        width: 48
+        height: 7
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3e55284495fc440bc3686950a3e7d1
+      internalID: 1392874172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 352
+        width: 112
+        height: 101
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9a8fe9eb9e1724e8742c3b7ac321cb
+      internalID: -694716478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_12
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 352
+        width: 32
+        height: 93
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c349e4c75564944af2b02a84a8f6bf
+      internalID: 446663309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_13
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 352
+        width: 112
+        height: 101
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b97f3d02b3a7a4194d0b0afa4fbaad
+      internalID: 20812718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_14
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 176
+        width: 182
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a69511b694c8d34fbc41f3512d86437
+      internalID: -35553147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_15
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 224
+        height: 160
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ff40b1fe2faad468c48c4d7622f50c
+      internalID: 1928738526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_16
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 80
+        width: 128
+        height: 160
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942f14d587441b94f9622e9f79bc6f08
+      internalID: -1330310423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_17
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 224
+        width: 144
+        height: 64
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894545c1862076545b3a761a7edcd1de
+      internalID: 572066950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_18
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 191
+        width: 128
+        height: 17
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f594542312c4b499df94e474cc31c4
+      internalID: 178841936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 80
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e54d39122dc955499f82cf1903fae67
+      internalID: -1028046410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_20
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 80
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974e0aa03fd09494e90be49b56e71777
+      internalID: 2082288293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_21
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 144
+        width: 144
+        height: 64
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1739fd3221526de4ca500839b7075b1d
+      internalID: -481710856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_22
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 128
+        width: 176
+        height: 48
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e8bdcb27495cd45863c99f7619df2c
+      internalID: -734975587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 112
+        height: 101
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5679cd5fdabe6984bbd26fb96abc5893
+      internalID: -2119825187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 93
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9034e767c91d140b49a4c968925791
+      internalID: 1855612744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_25
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 112
+        height: 101
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c103e1ddd34c1d04795e9a9c309b2350
+      internalID: 2113272193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_26
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 64
+        width: 144
+        height: 64
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95cc29edcaaffe4fb3fd429728d661c
+      internalID: -1583187838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_27
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 463
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0fe24b399f1ee4f87c9222b2b49d90
+      internalID: 42361368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 464
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc558421806a02443ac1a2765f4b157e
+      internalID: 525563693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_29
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 465
+        width: 80
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76cce5da558235146830606f66129589
+      internalID: 1984442166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_30
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 432
+        width: 129
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d7bc49d4964934a94136b557f2cc65
+      internalID: -1535621863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_31
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 400
+        width: 128
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7885177938c13d4b8d34d578ff115a1
+      internalID: 1237514317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_env_32
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 593
+        width: 142
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b8ce5f0bd135548a6ba97c0ae15cfc
+      internalID: -550550788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 018a9fcf2f7cef14386a74e3c52693b5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      castle_env_0: 186656516
+      castle_env_1: 1691517655
+      castle_env_10: 1392874172
+      castle_env_11: -694716478
+      castle_env_12: 446663309
+      castle_env_13: 20812718
+      castle_env_14: -35553147
+      castle_env_15: 1928738526
+      castle_env_16: -1330310423
+      castle_env_17: 572066950
+      castle_env_18: 178841936
+      castle_env_19: -1028046410
+      castle_env_2: -1847994887
+      castle_env_20: 2082288293
+      castle_env_21: -481710856
+      castle_env_22: -734975587
+      castle_env_23: -2119825187
+      castle_env_24: 1855612744
+      castle_env_25: 2113272193
+      castle_env_26: -1583187838
+      castle_env_27: 42361368
+      castle_env_28: 525563693
+      castle_env_29: 1984442166
+      castle_env_3: 860151201
+      castle_env_30: -1535621863
+      castle_env_31: 1237514317
+      castle_env_32: -550550788
+      castle_env_4: -985723762
+      castle_env_5: 1178940884
+      castle_env_6: 2102774531
+      castle_env_7: 2017998252
+      castle_env_8: -561716937
+      castle_env_9: 1777264564
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
