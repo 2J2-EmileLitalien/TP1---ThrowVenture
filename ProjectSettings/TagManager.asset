@@ -9,6 +9,7 @@ TagManager:
   - balleNormale
   - pegJaune
   - pegVert
+  - fondDuPlateauDeJeu
   layers:
   - Default
   - TransparentFX
