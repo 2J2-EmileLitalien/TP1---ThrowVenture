@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pegBleu_0: -8890708991931880294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

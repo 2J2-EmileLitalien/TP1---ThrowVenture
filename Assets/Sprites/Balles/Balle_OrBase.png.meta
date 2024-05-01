@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d337b4840f319924faec6afb6c3ca510
+guid: 28df157fb0bc4444c86b528558640a4a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -129,10 +129,10 @@ TextureImporter:
       name: Balle_OrBase_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 199
+        y: 271
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

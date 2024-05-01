@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40d98aec403b1e74a84b8f35f66efc9f
+guid: 77415e4ec8dc6304b8e5bc0f05d1383d
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -129,10 +129,10 @@ TextureImporter:
       name: Balle_MagiqueBase_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 199
+        y: 271
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

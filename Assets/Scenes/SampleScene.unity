@@ -13420,95 +13420,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &2953168980391639879
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1117955611288962200, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: texteScore
-      value: 
-      objectReference: {fileID: 12487785}
-    - target: {fileID: 1117955611288962200, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: balleOrSprite
-      value: 
-      objectReference: {fileID: -174490546719280741, guid: d337b4840f319924faec6afb6c3ca510, type: 3}
-    - target: {fileID: 1117955611288962200, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: nmbDeBallesTotale
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117955611288962200, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: balleMagiqueSprite
-      value: 
-      objectReference: {fileID: 6051678493973343020, guid: 40d98aec403b1e74a84b8f35f66efc9f, type: 3}
-    - target: {fileID: 1117955611288962200, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: balleNormaleSprite
-      value: 
-      objectReference: {fileID: 4477651964318980469, guid: 71b201b0e74cae34ea4901d82f89e786, type: 3}
-    - target: {fileID: 1117955611288962200, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: texteMeilleurScore
-      value: 
-      objectReference: {fileID: 1216043468}
-    - target: {fileID: 1117955611288962200, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: texteBallesRestante
-      value: 
-      objectReference: {fileID: 1023627583}
-    - target: {fileID: 1117955611288962200, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: balleExplosiveSprite
-      value: 
-      objectReference: {fileID: -3123811735650440400, guid: 8e4c1ab5392f9f44199a6470e908f9b2, type: 3}
-    - target: {fileID: 1797229956481801427, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_Name
-      value: Balle_NormaleBase_0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8779971104096951628, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 600bb597dbba92546b3f7e1ecf280d9b, type: 3}
 --- !u!1001 &3131754402465142116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13566,6 +13477,83 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 850d2d0f0536ab74b944894902ef4cb0, type: 3}
+--- !u!1001 &7421128461387511949
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 190049181359936482, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_Name
+      value: Balle_NormaleBase_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445039051411426408, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: texteScore
+      value: 
+      objectReference: {fileID: 12487785}
+    - target: {fileID: 1445039051411426408, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: texteMeilleurScore
+      value: 
+      objectReference: {fileID: 1216043468}
+    - target: {fileID: 1445039051411426408, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: texteBallesRestante
+      value: 
+      objectReference: {fileID: 1023627583}
+    - target: {fileID: 1544600287596647073, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966198996171611589, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065633284549987330, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4477651964318980469, guid: 27485008262d98441b59000cc3ad7e5d, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad8c75945f54f264a97123e6f784163e, type: 3}
 --- !u!1001 &7858779351392649881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13632,7 +13620,7 @@ SceneRoots:
   - {fileID: 539797861}
   - {fileID: 1449027251}
   - {fileID: 715508296}
-  - {fileID: 2953168980391639879}
+  - {fileID: 7421128461387511949}
   - {fileID: 1070838137}
   - {fileID: 683276259}
   - {fileID: 236796932}

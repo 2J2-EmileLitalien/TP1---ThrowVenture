@@ -121,10 +121,9 @@ public class detectionClique : MonoBehaviour
             corpsRigideBalle = GetComponent<Rigidbody2D>();
         //
 
-        // On sauvegarde la position initiale de la balle
+        // On sauvegarde la position initiale de la balle pour la replacer a chaque lancer
             positionInitiale = transform.position;
         //
-
 
         // On set le Meilleur Score qui sauvegarde a travers les parties
             texteMeilleurScore.text = "Meilleur score " + meilleurScore;
@@ -133,6 +132,10 @@ public class detectionClique : MonoBehaviour
         // On set la quantite de balles que le joueur peut lancer;
             nmbDeBallesRestante = nmbDeBallesTotale;
             texteBallesRestante.text = nmbDeBallesRestante + " / " + nmbDeBallesTotale;
+        //
+
+        // On desactive l'animator 
+            GetComponent<Animator>().enabled = false;
         //
     }
 
@@ -207,7 +210,7 @@ public class detectionClique : MonoBehaviour
 
             } else
             {
-            // Remplacer la balle, etc.
+                // Remplacer la balle, etc.
 
                 // Replace la balle, on enleve la simulation, la rend disponible
                     transform.position = positionInitiale;
@@ -221,9 +224,15 @@ public class detectionClique : MonoBehaviour
                         lesBalles[pointeur].magique = 1;
                     }
                 //
+                // On reset l'explosion si la balle est la explosive AVANT de changer de balle
+                if (lesBalles[pointeur].nom == "Balle Explosive")
+                {
+                    lesBalles[pointeur].explosion = true;
+                }
+                //
 
                 // On cycle a travers les balles apres chaque lancer
-                    if (pointeur < lesBalles.Length-1)
+                if (pointeur < lesBalles.Length-1)
                     {
                         pointeur += 1;
                     } else
@@ -231,7 +240,7 @@ public class detectionClique : MonoBehaviour
                         pointeur = 0;
                     }
                 //
-                
+
                 // On change le sprite de la balle 
                     GetComponent<SpriteRenderer>().sprite = lesBalles[pointeur].sprite;
                 //
@@ -240,7 +249,7 @@ public class detectionClique : MonoBehaviour
 
     } else if (collision.gameObject.tag == "limiteDuJeu")
         {
-            // Ne rien faire si limite de jeu 
+            // Ne rien faire si limite de jeu (Murs, plafond, separateurs en bas)
         }
         else
         {
@@ -251,7 +260,14 @@ public class detectionClique : MonoBehaviour
 
             if (lesBalles[pointeur].explosion)
             {
-            // SI BALLE = PEUT EXPLOSER
+                // SI BALLE = PEUT EXPLOSER
+                lesBalles[pointeur].explosion = false;
+                GetComponent<Animator>().enabled = true;
+                GetComponent<Animator>().SetTrigger("explosion");
+
+                corpsRigideBalle.simulated = false;
+                Invoke("desactiverExplosion", 0.51f);
+
 
             }
 
@@ -280,6 +296,38 @@ public class detectionClique : MonoBehaviour
         texteScore.text = "Score: " + score;
     }
 
+
+    void desactiverExplosion()
+    {
+        GetComponent<Animator>().enabled = false;
+        lesBalles[pointeur].explosion = true;
+
+        Invoke("replacerBalle", 0f);
+    }
+
+    void replacerBalle()
+    {
+        // On cycle a travers les balles apres chaque lancer
+        if (pointeur < lesBalles.Length - 1)
+        {
+            pointeur += 1;
+        }
+        else
+        {
+            pointeur = 0;
+        }
+        //
+
+        // On change le sprite de la balle 
+        GetComponent<SpriteRenderer>().sprite = lesBalles[pointeur].sprite;
+        //
+
+        transform.position = positionInitiale;
+        corpsRigideBalle.simulated = false;
+        balleDisponible = true;
+
+        GetComponent<Transform>().localScale = Vector3.one;
+    }
 
     void finDePartie()
     {

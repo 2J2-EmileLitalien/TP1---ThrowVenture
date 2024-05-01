@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8e4c1ab5392f9f44199a6470e908f9b2
+guid: 57a8e9bcfeab3884c8d3bc98ed774640
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -129,10 +129,10 @@ TextureImporter:
       name: Balle_ExplosiveBase_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 199
+        y: 271
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
