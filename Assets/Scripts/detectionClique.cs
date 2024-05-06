@@ -203,48 +203,19 @@ public class detectionClique : MonoBehaviour
                     lesBalles[pointeur].magique -= 1;
                 //
 
-                // ... et on la remplace en haut
+                // ... et on la remplace en haut...
                 positionBalleMagique = new Vector2(transform.position.x, positionInitiale.y);
                 transform.position = positionBalleMagique;
                 //
 
+                // ... et on lance l'animation (Qui contient le segment qui arrete la simulation de la balle pendant l'animation
+                GetComponent<Animator>().enabled = true;
+                GetComponent<Animator>().SetTrigger("teleportation");
+
             } else
             {
                 // Remplacer la balle, etc.
-
-                // Replace la balle, on enleve la simulation, la rend disponible
-                    transform.position = positionInitiale;
-                    corpsRigideBalle.simulated = false;
-                    balleDisponible = true;
-                //
-
-                // On reset le magique si la balle est la magique AVANT de changer de balle
-                    if (lesBalles[pointeur].nom == "Balle Magique")
-                    {
-                        lesBalles[pointeur].magique = 1;
-                    }
-                //
-                // On reset l'explosion si la balle est la explosive AVANT de changer de balle
-                if (lesBalles[pointeur].nom == "Balle Explosive")
-                {
-                    lesBalles[pointeur].explosion = true;
-                }
-                //
-
-                // On cycle a travers les balles apres chaque lancer
-                if (pointeur < lesBalles.Length-1)
-                    {
-                        pointeur += 1;
-                    } else
-                    {
-                        pointeur = 0;
-                    }
-                //
-
-                // On change le sprite de la balle 
-                    GetComponent<SpriteRenderer>().sprite = lesBalles[pointeur].sprite;
-                //
-                print("Balle actuelle = " + lesBalles[pointeur].nom);
+                Invoke("replacerBalle", 0f);
             }
 
     } else if (collision.gameObject.tag == "limiteDuJeu")
@@ -265,8 +236,7 @@ public class detectionClique : MonoBehaviour
                 GetComponent<Animator>().enabled = true;
                 GetComponent<Animator>().SetTrigger("explosion");
 
-                corpsRigideBalle.simulated = false;
-                Invoke("desactiverExplosion", 0.51f);
+                Invoke("replacerBalle", 0.9f);
 
 
             }
@@ -297,16 +267,24 @@ public class detectionClique : MonoBehaviour
     }
 
 
-    void desactiverExplosion()
-    {
-        GetComponent<Animator>().enabled = false;
-        lesBalles[pointeur].explosion = true;
-
-        Invoke("replacerBalle", 0f);
-    }
-
     void replacerBalle()
     {
+        GetComponent<Animator>().enabled = false;
+
+        // On reset le magique si la balle est la magique AVANT de changer de balle
+        if (lesBalles[pointeur].nom == "Balle Magique")
+        {
+            lesBalles[pointeur].magique = 1;
+        }
+        //
+
+        // On reset l'explosion si la balle est la explosive AVANT de changer de balle
+        if (lesBalles[pointeur].nom == "Balle Explosive")
+        {
+            lesBalles[pointeur].explosion = true;
+        }
+        //
+
         // On cycle a travers les balles apres chaque lancer
         if (pointeur < lesBalles.Length - 1)
         {
@@ -327,6 +305,7 @@ public class detectionClique : MonoBehaviour
         balleDisponible = true;
 
         GetComponent<Transform>().localScale = Vector3.one;
+        print("Balle actuelle = " + lesBalles[pointeur].nom);
     }
 
     void finDePartie()
