@@ -27,6 +27,7 @@ public class detectionClique : MonoBehaviour
     public TextMeshProUGUI texteScore;
     public static float meilleurScore = 0;
     public TextMeshProUGUI texteMeilleurScore;
+    private string variableScoreTemp;
 
     // Variables de fin de partie
     public TextMeshProUGUI texteBallesRestante;
@@ -126,7 +127,9 @@ public class detectionClique : MonoBehaviour
         //
 
         // On set le Meilleur Score qui sauvegarde a travers les parties
-            texteMeilleurScore.text = "Meilleur score " + meilleurScore;
+
+        variableScoreTemp = Convert.ToString(meilleurScore);
+        texteMeilleurScore.text = variableScoreTemp;
         //
 
         // On set la quantite de balles que le joueur peut lancer;
@@ -165,7 +168,8 @@ public class detectionClique : MonoBehaviour
             if (score > meilleurScore)
             { 
                 meilleurScore = score;
-                texteMeilleurScore.text = "Meilleur score: " + meilleurScore;
+                variableScoreTemp = Convert.ToString(meilleurScore);
+                texteMeilleurScore.text = variableScoreTemp;
             }
 
             // Peut importe, on fait fin de la partie
@@ -263,7 +267,8 @@ public class detectionClique : MonoBehaviour
         }
 
         // Peut importe la collision, on re-affiche le score (Englobe les collisions pegs, collision avec zone de fin qui reset la balle, etc.)
-        texteScore.text = "Score: " + score;
+        variableScoreTemp = Convert.ToString(score);
+        texteScore.text = variableScoreTemp;
     }
 
 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a49ec19fd01c1704cb05a6a5c39be0ae
+guid: ea069958433885f4eb41c503acf19748
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2413624446024202609
-    second: Bouton_Informations_0
+      213: 2256140333947136431
+    second: Affichage Nmb Balles_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bouton_Informations_0
+      name: Affichage Nmb Balles_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 361
-        height: 167
+        width: 753
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f864781ba55118ed0800000000000000
-      internalID: -2413624446024202609
+      spriteID: fa9a9502eab6f4f10800000000000000
+      internalID: 2256140333947136431
       vertices: []
       indices: 
       edges: []
@@ -156,8 +156,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Bouton_Informations_0: -2413624446024202609
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

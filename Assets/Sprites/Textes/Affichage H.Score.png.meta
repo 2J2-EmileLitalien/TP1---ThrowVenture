@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c252d7edfda84db4e819943e3db7b082
+guid: 7121c96a2a3127e41a7602eb1ebc7954
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6567672416081958443
-    second: Bouton_Commencez_0
+      213: -8197161969571611661
+    second: Affichage H.Score_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bouton_Commencez_0
+      name: Affichage H.Score_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 361
-        height: 167
+        width: 753
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d9ad4e0cb0fad4a0800000000000000
-      internalID: -6567672416081958443
+      spriteID: 3fbb75d7e94dd3e80800000000000000
+      internalID: -8197161969571611661
       vertices: []
       indices: 
       edges: []
@@ -156,8 +156,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Bouton_Commencez_0: -6567672416081958443
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
