@@ -42,6 +42,15 @@ public class detectionClique : MonoBehaviour
     public Sprite balleOrSprite;
     public Sprite balleNormaleSprite;
 
+    // Variables des sons
+    public AudioClip sonBalleLancer;
+    public AudioClip sonBalleApparaitre;
+    public AudioClip sonBalleTeleporation;
+    public AudioClip sonBalleExplosion;
+    public AudioClip sonPegToucher;
+    public AudioClip sonMurToucher;
+    
+
     public class Balles
     {
         // General
@@ -192,6 +201,9 @@ public class detectionClique : MonoBehaviour
 
         // On donne la force. Le ForceMode2D.Impulse = Le moyen par lequel on donne la force, ici on veut du Instant
         corpsRigideBalle.AddForce(directionDuLancer * forceDuLancer, ForceMode2D.Impulse);
+
+        // Joue le son 
+        GetComponent<AudioSource>().PlayOneShot(sonBalleLancer);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -212,9 +224,13 @@ public class detectionClique : MonoBehaviour
                 transform.position = positionBalleMagique;
                 //
 
-                // ... et on lance l'animation (Qui contient le segment qui arrete la simulation de la balle pendant l'animation
+                // ... et on lance l'animation (Qui contient le segment qui arrete la simulation de la balle pendant l'animation...
                 GetComponent<Animator>().enabled = true;
                 GetComponent<Animator>().SetTrigger("teleportation");
+                // 
+
+                // .. et on joue le son
+                GetComponent<AudioSource>().PlayOneShot(sonBalleTeleporation);
 
             } else
             {
@@ -225,11 +241,15 @@ public class detectionClique : MonoBehaviour
     } else if (collision.gameObject.tag == "limiteDuJeu")
         {
             // Ne rien faire si limite de jeu (Murs, plafond, separateurs en bas)
+            // Joue le son 
+            GetComponent<AudioSource>().PlayOneShot(sonMurToucher);
         }
         else
         {
-         // 100% collision = avec un peg
+            // 100% collision = avec un peg
 
+            // Joue le son 
+            GetComponent<AudioSource>().PlayOneShot(sonPegToucher);
 
             // EFFET DE BALLE SELON LE POINTEUR 
 
@@ -240,7 +260,10 @@ public class detectionClique : MonoBehaviour
                 GetComponent<Animator>().enabled = true;
                 GetComponent<Animator>().SetTrigger("explosion");
 
-                Invoke("replacerBalle", 0.9f);
+                // Joue le son 
+                GetComponent<AudioSource>().PlayOneShot(sonBalleExplosion);
+
+                Invoke("replacerBalle", 1f);
 
 
             }
@@ -308,6 +331,9 @@ public class detectionClique : MonoBehaviour
         transform.position = positionInitiale;
         corpsRigideBalle.simulated = false;
         balleDisponible = true;
+
+        // Joue le son 
+        GetComponent<AudioSource>().PlayOneShot(sonBalleApparaitre);
 
         GetComponent<Transform>().localScale = Vector3.one;
         print("Balle actuelle = " + lesBalles[pointeur].nom);
