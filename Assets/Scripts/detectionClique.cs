@@ -1,13 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using TMPro;
-using System;
-using JetBrains.Annotations;
-using UnityEditor.Experimental.GraphView;
+    using System.Collections;
+    using System.Collections.Generic;
+    using Unity.VisualScripting;
+    using UnityEditor;
+    using UnityEngine;
+    using UnityEngine.SceneManagement;
+    using TMPro;
+    using System;
+    using JetBrains.Annotations;
+    using UnityEditor.Experimental.GraphView;
+    using UnityEngine.UI;
+    using System.Net.Sockets;
 
 public class detectionClique : MonoBehaviour
 {
@@ -23,7 +25,7 @@ public class detectionClique : MonoBehaviour
     private Vector2 positionBalleMagique;
 
     // Variables du score
-    private float score = 0;
+    private static float score = 0;
     public TextMeshProUGUI texteScore;
     public static float meilleurScore = 0;
     public TextMeshProUGUI texteMeilleurScore;
@@ -49,7 +51,23 @@ public class detectionClique : MonoBehaviour
     public AudioClip sonBalleExplosion;
     public AudioClip sonPegToucher;
     public AudioClip sonMurToucher;
-    
+
+    // Variable descriptions 
+    public TextMeshProUGUI texteDescription;
+    public RawImage imageDescription;
+    public Texture imageBalleNormale;
+    public Texture imageBalleMagique;
+    public Texture imageBalleExplosive;
+    public Texture imageBalleOr;
+
+    public Scene sceneActuelle;
+    public String nomSceneActuelle;
+
+    // Variable fin du jeu
+    public float scoreVoulu;
+    public Image imageNoir;
+    private float durationFondu = 1.5f;
+   
 
     public class Balles
     {
@@ -57,6 +75,8 @@ public class detectionClique : MonoBehaviour
         public String nom;
         public Sprite sprite;
         public Boolean etat;
+        public Texture image;
+        public string description;
 
         // Plus specifique
         public float pointsMultiplicateur;
@@ -78,6 +98,11 @@ public class detectionClique : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // On prend le nom de la scene actuelle
+            sceneActuelle = SceneManager.GetActiveScene();
+            nomSceneActuelle = sceneActuelle.name;
+        //
+
         // Creation de mes balles + leurs informations
             // BALLE NORMALE (Aucun changement)
             balleNormale = new Balles();
@@ -88,6 +113,8 @@ public class detectionClique : MonoBehaviour
             balleNormale.taille = 0.812f;
             balleNormale.magique = 0;
             balleNormale.explosion = false;
+            balleNormale.description = "La balle de base. Elle n'a aucun pouvoirs!";
+            balleNormale.image = imageBalleNormale;
 
             // BALLE MAGIQUE (Passe a travers de 1 peg)
             balleMagique = new Balles();
@@ -98,6 +125,8 @@ public class detectionClique : MonoBehaviour
             balleMagique.taille = 0.812f; 
             balleMagique.magique = 1; 
             balleMagique.explosion = false;
+            balleMagique.description = "Cette balle ré-apparait en haut du plateau de jeu quand elle touche le fond, mais une seule fois!"; 
+            balleMagique.image = imageBalleMagique;
 
             // BALLE EXPLOSIVE (Explose au contact)
             balleExplosive = new Balles();
@@ -108,6 +137,8 @@ public class detectionClique : MonoBehaviour
             balleExplosive.taille = 0.812f;
             balleExplosive.magique = 0;
             balleExplosive.explosion = true;
+            balleExplosive.description = "Cette balle explose quand elle touche un peg, détruisant tous les pegs dans le rayon de l'explosion!";
+            balleExplosive.image = imageBalleExplosive;
 
             // BALLE EN OR (2x points)
             balleOr = new Balles();
@@ -118,6 +149,8 @@ public class detectionClique : MonoBehaviour
             balleOr.taille = 0.812f;
             balleOr.magique = 0;
             balleOr.explosion = false;
+            balleOr.description = "Cette balle double les points obtenu lorsqu'elle touche un peg, très utile en combination avec les pegs jaunes!";
+            balleOr.image = imageBalleOr;
         //
 
         // On met les balles dans un array pour pouvoir les prendre en cycle (Chaque lancer = Une nouvelle) 
@@ -135,15 +168,20 @@ public class detectionClique : MonoBehaviour
             positionInitiale = transform.position;
         //
 
-        // On set le Meilleur Score qui sauvegarde a travers les parties
+        // On set le Meilleur Score et le score qui sauvegarde a travers les parties
 
         variableScoreTemp = Convert.ToString(meilleurScore);
         texteMeilleurScore.text = variableScoreTemp;
+
+        variableScoreTemp = Convert.ToString(score);
+        texteScore.text = variableScoreTemp;
         //
 
+
+
         // On set la quantite de balles que le joueur peut lancer;
-            nmbDeBallesRestante = nmbDeBallesTotale;
-            texteBallesRestante.text = nmbDeBallesRestante + " / " + nmbDeBallesTotale;
+        nmbDeBallesRestante = nmbDeBallesTotale;
+            texteBallesRestante.text = nmbDeBallesRestante + "/" + nmbDeBallesTotale;
         //
 
         // On desactive l'animator 
@@ -161,7 +199,7 @@ public class detectionClique : MonoBehaviour
             if (Input.GetMouseButton(0) && balleDisponible)
             {
                 nmbDeBallesRestante -= 1;
-                texteBallesRestante.text = nmbDeBallesRestante + " / " + nmbDeBallesTotale;
+                texteBallesRestante.text = nmbDeBallesRestante + "/" + nmbDeBallesTotale;
 
                 // On track la souris quand elle clique 
                 positionSouris = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -173,16 +211,7 @@ public class detectionClique : MonoBehaviour
         // Fin du jeu. On attend que la balle devienne disponible (Donc on attend la fin du lancer) sinon ca va reset en plein milieu d'un lancer
         } else if (balleDisponible)
         {
-            // Si le score actuel est meilleur que le meilleurScore, on change le meilleurScore
-            if (score > meilleurScore)
-            { 
-                meilleurScore = score;
-                variableScoreTemp = Convert.ToString(meilleurScore);
-                texteMeilleurScore.text = variableScoreTemp;
-            }
-
-            // Peut importe, on fait fin de la partie
-            Invoke("finDePartie", 2f);
+            finDePartie();
         }
 
         
@@ -257,7 +286,12 @@ public class detectionClique : MonoBehaviour
             {
                 // SI BALLE = PEUT EXPLOSER
                 lesBalles[pointeur].explosion = false;
+                // On change le sprite de la balle 
+                GetComponent<SpriteRenderer>().sprite = lesBalles[pointeur].sprite;
+                //
                 GetComponent<Animator>().enabled = true;
+                corpsRigideBalle.constraints = RigidbodyConstraints2D.FreezeAll;
+
                 GetComponent<Animator>().SetTrigger("explosion");
 
                 // Joue le son 
@@ -298,6 +332,7 @@ public class detectionClique : MonoBehaviour
     void replacerBalle()
     {
         GetComponent<Animator>().enabled = false;
+        corpsRigideBalle.constraints = RigidbodyConstraints2D.None;
 
         // On reset le magique si la balle est la magique AVANT de changer de balle
         if (lesBalles[pointeur].nom == "Balle Magique")
@@ -328,6 +363,10 @@ public class detectionClique : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = lesBalles[pointeur].sprite;
         //
 
+        // On change la description 
+        texteDescription.text = lesBalles[pointeur].description;
+        imageDescription.texture = lesBalles[pointeur].image;
+
         transform.position = positionInitiale;
         corpsRigideBalle.simulated = false;
         balleDisponible = true;
@@ -341,10 +380,83 @@ public class detectionClique : MonoBehaviour
 
     void finDePartie()
     {
-        // print("Meilleur score on end = " + meilleurScore);
+        print("Score = " + score);
+        print("Score voulu = " + scoreVoulu);
 
-        // On reset la scene
-        SceneManager.LoadScene("SampleScene");
+        // Si score est plus haut ou egal a celui voulu, on avance
+        if (score >= scoreVoulu)
+        {
+            print("On passe au prochain niveau");
+
+            // Commence par tutoriel
+            if (nomSceneActuelle == "Tutoriel")
+            {
+                // On ne veut pas le score du tutoriel dans le score du jeu (Donc il ne sera pas dans le highscore a la fin, etc.) 
+                score = 0;
+                StartCoroutine(fonduChangerSceneDefondu("Niveau1"));
+            }
+            else if (nomSceneActuelle == "Niveau1")
+            {
+                StartCoroutine(fonduChangerSceneDefondu("Niveau2"));
+            }
+            else if (nomSceneActuelle == "Niveau2")
+            {
+                StartCoroutine(fonduChangerSceneDefondu("Niveau3"));
+            }
+            else
+            {
+                // 100% au niveau 3 et on reussi le niveau
+
+                // Si le score actuel est meilleur que le meilleurScore, on change le meilleurScore
+                if (score > meilleurScore)
+                {
+                    meilleurScore = score;
+                    variableScoreTemp = Convert.ToString(meilleurScore);
+                    texteMeilleurScore.text = variableScoreTemp;
+                }
+                score = 0;
+                // Fin du jeu revient a l'intro
+                StartCoroutine(fonduChangerSceneDefondu("Intro"));
+            }
+        }
+        // Sinon on recommence depuis le debut! (DEFAITE)
+        else
+        {
+            print("On recommence au niveau 1");
+
+            // Recommence
+            StartCoroutine(fonduChangerSceneDefondu("Niveau1"));
+        }
+    }
+
+
+    private IEnumerator fonduChangerSceneDefondu(string nomDeScene)
+    {
+        yield return StartCoroutine(fonduAuNoir());
+
+        SceneManager.LoadScene(nomDeScene);
+    }
+
+    private IEnumerator fonduAuNoir()
+    {
+        imageNoir.gameObject.SetActive(true);
+        float tempsPasser = 0;
+        Color couleur = imageNoir.color;
+
+        // On met l'image de plus en plus noir (Moins en moins invisible) 
+        while (tempsPasser < durationFondu)
+        {
+            couleur.a = Mathf.Clamp01(tempsPasser / durationFondu);
+            imageNoir.color = couleur;
+            tempsPasser += Time.deltaTime;
+            yield return null; // Aka attend la prochaine frame et non un temps X 
+        }
+
+        // Invisibiliter a 100% a la fin peut importe quoi
+        couleur.a = 1;
+        imageNoir.color = couleur;
+
+        print("Fondu au noir fini!");
     }
 
 
